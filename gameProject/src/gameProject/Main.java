@@ -2,6 +2,7 @@ package gameProject;
 
 import java.time.LocalDate;
 
+import Adapters.EDevletServiceAdapter;
 import Concrete.CampaignManager;
 import Concrete.GameManager;
 import Concrete.GamerManager;
@@ -13,23 +14,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Gamer gamer1=new Gamer(1,"Filiz","Gül",LocalDate.of(1993,01,01),"12345678910");
+		Gamer gamer1=new Gamer(1,"Filiz","Gül",LocalDate.of(1992,01,01),"12345678910");
   
 		Game game1=new Game(1,"ABC",50);
 		
 		Campaign campaign=new Campaign(1,"Yeni Yýl Kampanyasý",10,LocalDate.of(2021,01,01),LocalDate.of(2021,02,02));
 		
 		
-		
+		GamerManager gamerManager=new GamerManager(new EDevletServiceAdapter());
+		gamerManager.add(gamer1);
 	
 		CampaignManager campaignManager=new CampaignManager();
 		campaignManager.update(campaign);
 
 		GameManager gameManager=new GameManager();
 		gameManager.delete(game1);
-		
-		GamerManager gamerManager=new GamerManager();
-		gamerManager.add(gamer1);
 		
 		
 		

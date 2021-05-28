@@ -1,0 +1,13 @@
+package Adapters;
+
+import Abstract.GamerCheckService;
+import Entities.Gamer;
+
+public class MernisServiceAdapter implements GamerCheckService {
+
+	@Override
+	public boolean CheckIfRealPerson(Gamer gamer) {
+		return false;
+	}
+
+}
