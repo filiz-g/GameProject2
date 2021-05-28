@@ -1,0 +1,30 @@
+package gameProject;
+
+import java.time.LocalDate;
+
+import Concrete.GameManager;
+import Concrete.GamerManager;
+import Entities.Game;
+import Entities.Gamer;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Gamer gamer1=new Gamer(1,"Filiz","Gül",LocalDate.of(1993,01,01),"12345678910");
+  
+		Game game1=new Game(1,"ABC",50);
+
+		GameManager gameManager=new GameManager();
+		gameManager.delete(game1);
+		
+		GamerManager gamerManager=new GamerManager();
+		gamerManager.add(gamer1);
+		
+		
+		
+		
+		
+	}
+
+}

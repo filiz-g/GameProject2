@@ -1,0 +1,10 @@
+package Entities;
+
+public class NewYearCampaign extends Campaign {
+	
+	private int id;
+	
+	
+	
+
+}

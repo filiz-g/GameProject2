@@ -1,0 +1,16 @@
+package Entities;
+
+import java.time.LocalDate;
+
+public class NewYearCampaign extends Campaign {
+	
+	public NewYearCampaign(int id, String campaignName, int discount, LocalDate startDate, LocalDate finishDate) {
+		super(id, campaignName, discount, startDate, finishDate);
+	}
+
+
+	
+	
+	
+
+}
